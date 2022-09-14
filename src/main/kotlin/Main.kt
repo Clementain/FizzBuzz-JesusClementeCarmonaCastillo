@@ -2,10 +2,10 @@ fun main() {
     while (true) {
         val n = readLine()!!.toInt()
         if (n <= 1000000) {
-                println(fizzBuzz(n))
-            } else {
-                println("Limite excedido")
-            }
+            println(fizzBuzz(n))
+        } else {
+            println("Limite excedido")
+        }
     }
 }
 
@@ -13,9 +13,9 @@ fun fizzBuzz(n: Int): String {
     val s: String = if (n % 5 == 0 && n % 3 == 0 && n != 0) {
         "fizzbuzz!"
     } else (if (n % 5 == 0 && n != 0) {
-        "buzz!"
-    } else if (n % 3 == 0 && n != 0) {
         "fizz!"
+    } else if (n % 3 == 0 && n != 0) {
+        "buzz!"
     } else {
         numeroALetra(n)
     })
@@ -33,13 +33,9 @@ fun numeroALetra(s: Int?): String {
         return resultado.toString()
     }
 
-    if (mi > 0) {
-        resultado.append(identificarDigitos(mi).toString())
-    }
+
     if (mi == 1) {
         resultado.append("Millón ")
-    } else if (mi > 0) {
-        resultado.append("Millones ")
     }
     if (m > 0) {
         resultado.append(identificarDigitos(m).toString() + "Mil ")
