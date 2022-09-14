@@ -1,7 +1,7 @@
 fun main() {
     while (true) {
         val n = readLine()!!.toInt()
-        if (n <= 1000000) {
+        if (n in 0..1000000) {
             println(fizzBuzz(n))
         } else {
             println("Limite excedido")
